@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocultar texto</title>
+<style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #texto {
+            margin-top: 20px;
+            font-size: 20px;
+            display: none; 
+        }
+</style>
+</head>
+<body>
+ 
+    <h1>Mostrar/Ocultar Frase</h1>
+<button id="btn-toggle">Mostrar</button>
+<div id="texto">Oi!</div>
+ 
+    <script>
+        let visivel = false;
+ 
+        const textoElemento = document.getElementById('texto');
+        const btnToggle = document.getElementById('btn-toggle');
+
+        function alternarOcultar() {
+            if (visivel) {
+                textoElemento.style.display = 'none';
+                btnToggle.innerText = 'Mostrar'; 
+            } else {
+                textoElemento.style.display = 'block';
+                btnToggle.innerText = 'Ocultar';
+            }
+            visivel = !visivel;
+        }
+        btnToggle.addEventListener('click', alternarOcultar);
+</script>
+ 
+</body>
+</html> -->

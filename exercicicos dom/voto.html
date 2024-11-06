@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voto</title>
+<style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #resultado {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .candidato {
+            margin-top: 20px;
+            display: none;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+</style>
+</head>
+<body>
+ 
+    <h1>Votação de São Leopoldo</h1>
+<button id="bt-votar">Votar</button>
+ 
+    <div id="resultado"></div>
+ 
+    <div id="candidato1" class="candidato">
+<img src="Image (1).jpg" alt="Candidato 1">
+<p id="nome1">Candidato 1:Felipo Balsi</p>
+</div>
+<div id="candidato2" class="candidato">
+<img src="Image (2).jpg" alt="Candidato 2">
+<p id="nome2">Candidato 2:Pedro Suetam</p>
+</div>
+ 
+    <div id="candidato3" class="candidato">
+<img src="Image.jpg" alt="Candidato 3">
+<p id="nome3">Candidato 3:Cachorro </p>
+</div>
+ 
+    <script>
+        let votos = {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "nulo": 0
+        }
+        const candidatos = {
+            "1": { nome: "Felipo Balsi", foto: "image(2).jpg" },
+            "2": { nome: "Pedro Suetam", foto: "image(1).jpg" },
+            "3": { nome: "Cachorro", foto: "image.jpg" }
+        }
+        function exibirCandidato(candidato) {
+            document.querySelectorAll('.candidato').forEach(div => div.style.display = 'none');
+            const divCandidato = document.getElementById(`candidato${candidato}`);
+            divCandidato.style.display = 'block';
+
+            const confirmar = confirm(`Confirmar voto em ${candidatos[candidato].nome}?`);
+ 
+            if (confirmar) {
+                votos[candidato]++;
+                alert(`Voto confirmado em ${candidatos[candidato].nome}`);
+            } else {
+                votos["nulo"]++;
+                alert("Voto anulado");
+            }
+            console.log("Contagem de votos:", votos);
+        }
+        function votar() {
+            const voto = prompt("Digite o número do candidato (1: Felipo Balsi, 2: Pedro Suetam, 3: Cachorro):");
+ 
+            if (candidatos[voto]) {
+                exibirCandidato(voto);
+            } else {
+                votos["nulo"]++;
+                alert("Voto nulo");
+                console.log("Contagem de votos:", votos);
+            }
+        }
+        document.getElementById('bt-votar').addEventListener('click', votar);
+</script>
+ 
+</body>
+</html> -->
